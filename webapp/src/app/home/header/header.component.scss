@@ -1,0 +1,11 @@
+div {
+  width: 100vw;
+  background-color: var(--bg-primary);
+  height: 120px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  color: var(--white);
+}

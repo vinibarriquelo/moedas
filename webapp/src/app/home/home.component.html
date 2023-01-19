@@ -1,0 +1,8 @@
+<app-header></app-header>
+<div class="container-bg">
+  <div class="container">
+    <ng-container *ngFor="let coin of coins">
+      <app-coin-card [coin]="coin"></app-coin-card>
+    </ng-container>
+  </div>
+</div>

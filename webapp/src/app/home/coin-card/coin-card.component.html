@@ -1,0 +1,23 @@
+<div class="container" *ngIf="coin">
+  <header>
+    <h1>{{ coin?.code }}/{{ coin?.codein }}</h1>
+    <p>{{ coin?.create_date!.split(' ')[1] }}</p>
+  </header>
+  <main>
+    <div>
+      <p>Bid</p>
+      <h2>{{ coin?.bid }}</h2>
+    </div>
+    <div>
+      <p>Ask</p>
+      <h2>{{ coin?.ask }}</h2>
+    </div>
+  </main>
+  <section>
+    <p>L:${{ coin?.low }}</p>
+    <p>H:{{ coin?.high }}</p>
+  </section>
+  <footer>
+    <p>+0,0005 (+0,01%)</p>
+  </footer>
+</div>
