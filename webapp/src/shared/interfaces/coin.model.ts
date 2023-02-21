@@ -4,7 +4,7 @@ export interface CoinModel {
   name: string;
   high: string;
   low: string;
-  varBid: string;
+  varBid: number;
   pctChange: string;
   bid: string;
   ask: string;

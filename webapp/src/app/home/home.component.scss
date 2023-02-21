@@ -6,9 +6,12 @@
 
 .container {
   width: 80vw;
-  padding: 40px 20px ;
+  padding: 40px 20px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+
+  // Coins grid.
+  place-items: center;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
 }

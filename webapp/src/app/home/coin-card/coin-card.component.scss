@@ -32,7 +32,6 @@ main {
   p {
     text-align: center;
     margin: 10px 0;
-
   }
 
   div {
@@ -75,5 +74,13 @@ footer {
   border-top: 2px solid var(--border-card);
   padding: 8px;
 
+  color: #81f88b;
+}
+
+.text-red {
+  color: #ff1901;
+}
+
+.text-green {
   color: #81f88b;
 }

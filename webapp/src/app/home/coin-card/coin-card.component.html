@@ -14,10 +14,11 @@
     </div>
   </main>
   <section>
-    <p>L:${{ coin?.low }}</p>
+    <p>L:{{ coin?.low }}</p>
     <p>H:{{ coin?.high }}</p>
   </section>
   <footer>
-    <p>+0,0005 (+0,01%)</p>
+    <p [ngClass]="coin.varBid > 0 ? 'text-green' : 'text-red'"><span *ngIf="coin.varBid > 0">+</span>{{ coin?.varBid }}
+    </p>
   </footer>
 </div>
