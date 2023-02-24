@@ -1,13 +1,17 @@
-div {
+.bg {
   width: 100vw;
   background-color: var(--bg-primary);
   height: 120px;
   padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
   color: var(--white);
+
+  .container {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 ::ng-deep .cdk-overlay-container {

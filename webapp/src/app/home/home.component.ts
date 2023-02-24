@@ -13,15 +13,12 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   public coins: CoinModel[] = [];
 
-  public initialCoins: string[] = [
-    'USD-BRL',
-    'EUR-BRL',
-    'BTC-BRL',
-    'CNY-BRL',
-  ];
+  public initialCoins: string[] = [];
 
   ngOnInit(): void {
-    this.getCoins(this.initialCoins);
+    if (this.initialCoins.length > 0) {
+      this.getCoins(this.initialCoins);
+    }
   }
 
   ngOnDestroy(): void {
@@ -42,5 +39,13 @@ export class HomeComponent implements OnInit, OnDestroy {
         console.log(err);
       }
     )
+  }
+
+  public getPairs(pairs: string[]) {
+    if (pairs.length > 0) {
+      this.getCoins(pairs)
+    } else {
+      this.coins = [];
+    }
   }
 }

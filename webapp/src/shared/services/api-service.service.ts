@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiServiceService {
 
-  private apiUrl: string = 'https://economia.awesomeapi.com.br/';
+  private apiUrl: string = 'https://economia.awesomeapi.com.br';
 
   constructor(
     private http: HttpClient
@@ -26,5 +26,9 @@ export class ApiServiceService {
     // Padrão de pares de moedas aceito pela API.
     // USD-BRL,EUR-BRL,BTC-BRL
     return this.http.get<any>(`${this.apiUrl}/json/last/${coins}`);
+  }
+
+  public getPairs(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/json/available`);
   }
 }

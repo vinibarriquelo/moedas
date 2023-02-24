@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header (selected)="getPairs($event)"></app-header>
 <div class="container-bg">
   <div class="container">
     <ng-container *ngFor="let coin of coins">

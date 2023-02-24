@@ -1,4 +1,6 @@
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <h1>Cotações de moedas</h1>
-  <app-select-coins></app-select-coins>
+<div class="bg">
+  <div class="container">
+    <h1>Cotações de moedas</h1>
+    <app-select-coins (selected)="getPairsSelected($event)"></app-select-coins>
+  </div>
 </div>

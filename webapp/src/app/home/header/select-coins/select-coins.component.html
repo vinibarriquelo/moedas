@@ -1,7 +1,9 @@
 <mat-form-field>
-  <mat-select [multiple]="true" formControlName="toppings">
-    <mat-option  *ngFor="let item of toppingList" style="z-index: 999;">
-      {{ item }}
-    </mat-option>
-  </mat-select>
+  <form [formGroup]="form">
+    <mat-select placeholder="Selecione as" [multiple]="true" formControlName="selected">
+      <mat-option *ngFor="let item of pairs" style="z-index: 999;" [value]="item">
+        {{ item }}
+      </mat-option>
+    </mat-select>
+  </form>
 </mat-form-field>
